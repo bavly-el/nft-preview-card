@@ -69,9 +69,7 @@ body {
 p{
   color:rgb(139,167,206);
 }
-.card > p{
-  line-height: 1.5;
-}
+
 .card .prise-time {
   display: flex;
   justify-content: space-between;
@@ -81,7 +79,7 @@ p{
   color: var(--hover-color);
 }
 .card .prise-time p{
-  font-size:1rem;
+  font-size:1.2rem;
   color:hsl(215, 51%, 70%);
   display: flex;
   align-items: center;
