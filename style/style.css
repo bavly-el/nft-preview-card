@@ -1,0 +1,124 @@
+/* variables */
+:root {
+  --Very-dark-blue-all: hsl(216, 54%, 11%);
+  --Very-dark-blue-card: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --hover-color: rgb(33, 247, 245);
+}
+/* variables */
+*{
+font-family: 'Outfit', sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Very-dark-blue-all);
+  min-height: 100vh;
+}
+.card {
+  width: 300px;
+  background-color: var(--Very-dark-blue-card);
+  padding: 20px;
+  border-radius: 15px;
+}
+.card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+.card .main-img{
+  position: relative;
+  border-radius: 5px;
+
+}
+.card .main-img::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50.9%);
+  width: 0;
+  height: 0;
+  background-color: rgba(33, 247, 244, 0.4);
+  z-index: 5;
+  transition: 0.4s;
+}
+.card .main-img:hover::before{
+    width: 100%;
+   height: calc(100% - 5px);
+  border-radius: 5px;
+
+} 
+.card .main-img a{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50% );
+  color: white;
+  font-size: 30px;
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 10;
+}
+.card .main-img:hover a {
+    opacity: 1;
+}
+ h3{
+  color: white;
+}
+p{
+  color:rgb(139,167,206);
+
+}
+.card .prise-time {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.card .prise-time p:first-child {
+  color: var(--hover-color);
+}
+.card .prise-time p{
+  font-size:0.92rem;
+  color:hsl(215, 51%, 70%);
+  display: flex;
+  align-items: center;
+}
+.card .prise-time p i {
+  margin-right: 6px;
+
+}
+.card .avatar {
+  display: flex;
+}
+.card .avatar{
+  
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.card .avatar:after{
+  content:'';
+  position: absolute;
+  top: -10px;
+  left: 4%;
+  width: 92%;
+  height: 1px;
+  background-color:var(--Very-dark-blue-line);
+}
+.card .avatar img {
+  max-width: 25px;
+  height: 25px;
+  border: 2px solid white;
+  border-radius: 50%;
+
+}
+.card .avatar  p{
+  margin-left: 20px;
+  font-size:0.9rem;
+  
+}
+.card .avatar p span{
+  color:white;
+  margin-left: 3px;
+}
